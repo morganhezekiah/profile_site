@@ -3,6 +3,7 @@
 from pathlib import Path
 
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -138,6 +139,7 @@ EMAIL_USE_SSL =False
 
 AWS_ACCESS_KEY_ID = 'AKIAQKBOBJPZNARLKE37'
 AWS_SECRET_ACCESS_KEY = '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'
+AWS_DEFAULT_ACL=None
 AWS_STORAGE_BUCKET_NAME = 'hezekiahmorgan'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
@@ -148,3 +150,5 @@ AWS_LOCATION = 'statics'
 
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+django_heroku.settings(locals())
