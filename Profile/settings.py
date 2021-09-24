@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    "storages",
+
     'base',
     'home',
 ]
@@ -121,3 +123,28 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS =[
     os.path.join(BASE_DIR, "statics")
 ]
+EMAIL_HOST_PASSWORD =os.environ.get("EMAIL_PASSWORD")
+EMAIL_HOST_USER=os.environ.get("EMAIL_ADDRESS")
+EMAIL_USE_TLS=True
+EMAIL_HOST="smtp.gmail.com"
+EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
+EMAIL_PORT =587
+EMAIL_USE_SSL =False
+# AMAZON_PASSWORD ="h/LUCoqev+9i20oe1nSXLc/kZZDWn91BkVRt/0wt"
+# AMAZON_KEY="AKIAQKBOBJPZNARLKE37"
+# AMAZON_BUCKET ="hezekiahmorgan"
+# AMAZON_REGION="EU (Paris) eu-west-3"
+
+
+AWS_ACCESS_KEY_ID = 'AKIAQKBOBJPZNARLKE37'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'hezekiahmorgan'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'statics'
+
+
+STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

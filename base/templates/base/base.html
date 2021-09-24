@@ -19,9 +19,11 @@
   <link href="{%static 'vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
   <link href="{%static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
   <link href="{%static 'vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+  
 
   <!-- Template Main CSS File -->
   <link href="{%static 'css/style.css'%}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 
   <!-- =======================================================
   * Template Name: {{projectName}} - v4.3.0
@@ -29,6 +31,16 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    a {
+      color: #0d6efd;
+
+    }
+    a:hover{
+      opacity:0.5;
+    }
+  </style>
 </head>
 
 <body>
@@ -63,6 +75,7 @@
 
   <!-- Template Main JS File -->
   <script src="{%static 'js/main.js' %}"></script>
+  <script src="{% static 'js/sendEmail.js'%}"></script>
 
 </body>
 

@@ -16,7 +16,7 @@
                   <div class="row">
                     <div class="col-sm-6 col-md-5">
                       <div class="about-img">
-                        <img src="{%static 'img/testimonial-2.jpg' %}" class="img-fluid rounded b-shadow-a" alt="">
+                        <img src="{%static 'img/me1.jpg' %}" class="img-fluid rounded b-shadow-a" alt="">
                       </div>
                     </div>
                     <div class="col-sm-6 col-md-7">
@@ -24,7 +24,8 @@
                         <p><span class="title-s">Name: </span> <span>{{developerName}}</span></p>
                         <p><span class="title-s">Profile: </span> <span>Full stack developer</span></p>
                         <p><span class="title-s">Email: </span> <span>morganhezekiah11@gmail.com</span></p>
-                        <p><span class="title-s">Phone: </span> <span>+237 8122510760</span></p>
+                        <p><span class="title-s">Phone: </span> <span>{{phone}}</span></p>
+                        <p><span class="title-s">Download my CV</span><a href="/download/mycv"  id="downloadCvButton" download="hezekiahMorgan.pdf" class="bi bi-download"></a></p>
                       </div>
                     </div>
                   </div>
@@ -64,20 +65,10 @@
                       </h5>
                     </div>
                     <p class="lead">
-                      Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id
-                      imperdiet et, porttitor
-                      at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla
-                      porttitor accumsan tincidunt.
+                      Hezekiah Morgan is a software developer with experience creating system and enterprise applications. My background in web development and design, android development and database management makes for a mindful but competitive approach. I am fueled by my passion for understanding the nuances of software buildings and implementation. I consider myself a 'forever student'; eager to build on my academic foundation in general software development and engineering.
                     </p>
                     <p class="lead">
-                      Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
-                      porttitor volutpat. Vestibulum
-                      ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
-                    </p>
-                    <p class="lead">
-                      Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-                      Nulla porttitor accumsan
-                      tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                      I believe mindfulness in the workplace is key to success - a tenet I live out through my interest in meditation, music and child-care. I am currently working as afreelancing developer and always interested in challenges. Reach out to <a href="">{{ email }}</a> to connect!
                     </p>
                   </div>
                 </div>
@@ -105,29 +96,12 @@
           <div class="col-md-4">
             <div class="service-box">
               <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Design</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
                 <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
               </div>
               <div class="service-content">
                 <h2 class="s-title">Web Development</h2>
                 <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
+                  Web development processes such as UI/UX design etc.
                 </p>
               </div>
             </div>
@@ -138,11 +112,23 @@
                 <span class="ico-circle"><i class="bi bi-binoculars"></i></span>
               </div>
               <div class="service-content">
-                <h2 class="s-title">Responsive Design</h2>
+                <h2 class="s-title">Android development and design</h2>
                 <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                  provident vitae! Magni
-                  tempora perferendis eum non provident.
+                  Making and management of your android applications.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="service-box">
+              <div class="service-ico">
+                <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
+              </div>
+              <div class="service-content">
+                <h2 class="s-title">Database Management</h2>
+                <p class="s-description text-center">
+                  Handle creating and management of commercial and enterprise database.
                 </p>
               </div>
             </div>
@@ -210,7 +196,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="work-box">
               <a href="{%static 'img/work-1.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox">
                 <div class="work-img">
@@ -220,129 +206,34 @@
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Lorem impsum dolor</h2>
+                    <h2 class="w-title">FindProperty</h2>
                     <div class="w-more">
                       <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
+                      <a href="https://60ce78751007014a494c9965--brave-pare-e747dc.netlify.app" target="_blank"> <span class="bi bi-plus-circle"></span></a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+
+          <div class="col-md-6">
             <div class="work-box">
-              <a href="{%static 'img/work-2.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+              <a href="{%static 'img/work-1.jpg'%}" data-gallery="portfolioGallery" class="portfolio-lightbox">
                 <div class="work-img">
-                  <img src="{%static 'img/work-2.jpg'%}" alt="" class="img-fluid">
+                  <img src="{%static 'img/work-1.jpg'%}" alt="" class="img-fluid">
                 </div>
               </a>
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Loreda Cuno Nere</h2>
+                    <h2 class="w-title">Password Saver</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-3.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Mavrito Lana Dere</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-4.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Bindo Laro Cado</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-5.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Studio Lena Mado</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a href="portfolio-details.html"> <span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-6.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Studio Big Bang</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2017</span>
+                      <span class="w-ctegory">Android Development</span> / <span class="w-date">18 Sep. 2018</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -372,8 +263,8 @@
                 <div class="swiper-slide">
                   <div class="testimonial-box">
                     <div class="author-test">
-                      <img src="assets/img/testimonial-2.jpg" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">Xavi Alonso</span>
+                      <img src="{%static 'img/testimonial-2.jpg'%}" alt="" class="rounded-circle b-shadow-a">
+                      <span class="author">Socrates </span>
                     </div>
                     <div class="content-test">
                       <p class="description lead">
@@ -388,7 +279,7 @@
                   <div class="testimonial-box">
                     <div class="author-test">
                       <img src="assets/img/testimonial-4.jpg" alt="" class="rounded-circle b-shadow-a">
-                      <span class="author">Marta Socrate</span>
+                      <span class="author">Aristotoes</span>
                     </div>
                     <div class="content-test">
                       <p class="description lead">
@@ -428,38 +319,7 @@
                       </h5>
                     </div>
                     <div>
-                      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                            </div>
-                          </div>
-                          <div class="col-md-12 text-center my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                          </div>
-                          <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                          </div>
-                        </div>
-                      </form>
+                       {% include "home/messageMeForm.html"%}
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -470,17 +330,18 @@
                     </div>
                     <div class="more-info">
                       <ul class="list-ico">
-                        <li><span class="bi bi-geo-alt"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                        <li><span class="bi bi-phone"></span> (617) 557-0089</li>
-                        <li><span class="bi bi-envelope"></span> contact@example.com</li>
+                        <li><span class="bi bi-geo-alt"></span>Owerri Imo state, Nigeria</li>
+                        <li><span class="bi bi-phone"></span> {{phone}}</li>
+                        <li><span class="bi bi-envelope"></span>{{email}}</li>
                       </ul>
                     </div>
                     <div class="socials">
                       <ul>
                         <li><a href=""><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
-                        <li><a href=""><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li>
+                        <!-- <li><a href=""><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li> -->
                         <li><a href=""><span class="ico-circle"><i class="bi bi-twitter"></i></span></a></li>
                         <li><a href=""><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+                        <li><a href=""><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -494,4 +355,33 @@
 
   </main><!-- End #main -->
 
+
+  <style>
+    #downloadCvButton{
+      font-size: 23px;
+      margin-left:10px;
+      animation:  downloadButtonAnim infinite 1.5s cubic-bezier(0.45, -0.32, 0.54, 1.16);
+    }
+
+    @keyframes downloadButtonAnim {
+      0%{
+        opacity:1;
+      }
+      30%{
+        opacity:0.8;
+      }
+      60%{
+        opacity: 0.6;
+      }
+      80%{
+        opacity:0.5
+      }
+      90%{
+        opacity:0.3;
+      }
+      100%{
+        opacity:0.1;
+      }
+    }
+  </style>
   {%endblock content%}
