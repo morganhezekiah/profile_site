@@ -54,3 +54,7 @@ def sendEmail(email, name, subject, message):
     except Exception as e:
         pass
     
+
+# def favicon(request):
+#     path = os.path.join(settings.BASE_DIR, "statics/favicon.ico")
+#     return FileResponse(open(path, "rb"))
