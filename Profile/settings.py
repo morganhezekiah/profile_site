@@ -24,6 +24,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'clearcache',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -115,18 +116,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATICFILES_DIRS =[
-    os.path.join(BASE_DIR, "statics")
-]
-# STATIC_ROOT =  os.path.join(BASE_DIR, 'statics')
 
-# STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 
 
 EMAIL_HOST_PASSWORD =os.environ.get("EMAIL_PASSWORD")
@@ -136,10 +132,7 @@ EMAIL_HOST="smtp.gmail.com"
 EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
 EMAIL_PORT =587
 EMAIL_USE_SSL =False
-# AMAZON_PASSWORD ="h/LUCoqev+9i20oe1nSXLc/kZZDWn91BkVRt/0wt"
-# AMAZON_KEY="AKIAQKBOBJPZNARLKE37"
-# AMAZON_BUCKET ="hezekiahmorgan"
-# AMAZON_REGION="EU (Paris) eu-west-3"
+
 
 
 AWS_ACCESS_KEY_ID = 'AKIAQKBOBJPZNARLKE37'
@@ -155,5 +148,7 @@ AWS_LOCATION = 'statics'
 
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR, "statics")
+]
 django_heroku.settings(locals())
